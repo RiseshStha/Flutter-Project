@@ -1,5 +1,6 @@
 import 'package:batch32b/model/simpleinterest_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SimpleInterest extends StatefulWidget {
   const SimpleInterest({super.key});
@@ -49,6 +50,12 @@ class _SimpleInterestScreenState extends State<SimpleInterest> {
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter Principle ',
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.red),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
+                  ),
                 ),
               ),
               const SizedBox(height: 8),
@@ -67,6 +74,12 @@ class _SimpleInterestScreenState extends State<SimpleInterest> {
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter Rate ',
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.red),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
+                  ),
                 ),
               ),
               const SizedBox(height: 8),
@@ -85,6 +98,12 @@ class _SimpleInterestScreenState extends State<SimpleInterest> {
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter Time ',
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.red),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
+                  ),
                 ),
               ),
               const SizedBox(height: 8),
@@ -120,6 +139,46 @@ class _SimpleInterestScreenState extends State<SimpleInterest> {
                 'Simple Interest is : $result',
                 style: const TextStyle(
                   fontSize: 30,
+                ),
+              ),
+              RichText(
+                text: TextSpan(
+                  text: 'Simple ',
+                  style: const TextStyle(
+                    color: Colors.black45,
+                    fontSize: 30,
+                  ),
+                  children: <TextSpan>[
+                    const TextSpan(
+                      text: 'interest is ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green,
+                        backgroundColor: Color.fromARGB(255, 84, 76, 54),
+                      ),
+                    ),
+                    TextSpan(
+                      text: '$result',
+                    ),
+                  ],
+                ),
+              ),
+              RichText(
+                text: const TextSpan(
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.black,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'M',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                      ),
+                    ),
+                    TextSpan(text: "y name is Risesh"),
+                  ],
                 ),
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:batch32b/screen/arithmetic_screen.dart';
+import 'package:batch32b/screen/column_screen.dart';
 import 'package:batch32b/screen/simple_interest.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +50,23 @@ class DashBoard extends StatelessWidget {
                       );
                     },
                     child: const Text("Simple Interest")),
+                const SizedBox(
+                  height: 2,
+                ),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      //style the button
+                      backgroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        //replace the current page
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ColumnScreen()),
+                      );
+                    },
+                    child: const Text("Column Screen")),
               ],
             )));
   }
